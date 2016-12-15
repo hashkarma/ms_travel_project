@@ -2,18 +2,21 @@ package com.mytravel.service.providers;
 
 import java.util.Random;
 
+import org.springframework.stereotype.Component;
+
 import com.mytravel.plans.ServiceProvider;
 import com.mytravel.vo.TripPlan;
 /**
  * @author Deepank Sharma
  *
  */
+@Component
 public class ASouthWest implements ServiceProvider {
 
 	@Override
 	public TripPlan createPlan(String origin, String destination) {
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

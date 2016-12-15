@@ -2,6 +2,8 @@ package com.mytravel.service.providers;
 
 import java.util.Random;
 
+import org.springframework.stereotype.Component;
+
 import com.mytravel.plans.ServiceProvider;
 import com.mytravel.vo.TripPlan;
 
@@ -9,6 +11,7 @@ import com.mytravel.vo.TripPlan;
  * @author Deepank Sharma
  *
  */
+@Component
 public class HHotelsDotCom implements ServiceProvider {
 
 	@Override

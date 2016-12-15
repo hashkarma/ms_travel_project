@@ -2,9 +2,11 @@ package com.mytravel.service.providers;
 
 import java.util.Random;
 
+import org.springframework.stereotype.Component;
+
 import com.mytravel.plans.ServiceProvider;
 import com.mytravel.vo.TripPlan;
-
+@Component
 public class CKayak implements ServiceProvider {
 
 	@Override

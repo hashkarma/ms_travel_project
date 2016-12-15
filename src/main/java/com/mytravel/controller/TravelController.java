@@ -3,6 +3,8 @@ package com.mytravel.controller;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,10 +27,7 @@ import com.mytravel.vo.TripPlan;
  *
  */
 @RestController
-public class TravelController {
-	@Autowired
-	TravelService service;
-	
+public class TravelController {	
 	/**
 	 * Method to fetch the best price quote amongst a list of Service Providers for airlines
 	 *
@@ -43,30 +42,30 @@ public class TravelController {
 	 * Method to fetch the best price quote amongst a list of Service Providers for airlines and hotels
 	 *
 	 */
-	@RequestMapping(value = "/v1/airhotels/")
+	@RequestMapping(value = "/v1/airhotel/")
 	public ResponseEntity<Object> getAirlineAndHotelQuotes(){		
 		return ResponseEntity.ok().body(
-				CompletableFuture.supplyAsync(()->service.selectBestTripPlan(initializeAirlines(), "Dallas", "Miami"))
+				CompletableFuture.supplyAsync(()->service.selectBestTripPlan(initializeAirlines(), "Dallas", "Miami"),EXECUTOR_SERVICE)
 				.thenCombine(
-						CompletableFuture.supplyAsync(()->service.selectBestTripPlan(initializeHotels(), "Dallas", "Miami"))
+						CompletableFuture.supplyAsync(()->service.selectBestTripPlan(initializeHotels(), "Dallas", "Miami"),EXECUTOR_SERVICE)
 						, (air,hotels) -> service.combine(air,hotels)).join());				
 	}
 	
+	
 	/**
-	 * Method to fetch the best price quote amongst a list of Service Providers for airlines and hotels and get Car quotes based on the previous two quotes
+	 * Method to fetch the best price quote amongst a list of Service Providers for airlines and hotels
 	 *
 	 */
-	@RequestMapping(value = "/v1/airhotelscar/")
-	public ResponseEntity<Object> getAirlineAndHotelandcarQuoteswithAlliance(){		
+	@RequestMapping(value = "/v1/airhotelcar/")
+	public ResponseEntity<Object> getAirlineWithHotelandCarQuotes(){		
 		return ResponseEntity.ok().body(
-				CompletableFuture.supplyAsync(()->service.selectBestTripPlan(initializeAirlines(), "Dallas", "Miami"))
+				CompletableFuture.supplyAsync(()->service.selectBestTripPlan(initializeAirlines(), "Dallas", "Miami"),EXECUTOR_SERVICE)
 				.thenCombine(
-						CompletableFuture.supplyAsync(()->service.selectBestTripPlan(initializeHotels(), "Dallas", "Miami"))
-						, (air,hotels) -> service.combine(air,hotels))
+						CompletableFuture.supplyAsync(()->service.selectBestTripPlan(initializeHotels(), "Dallas", "Miami"),EXECUTOR_SERVICE)
+						,(air,hotels) -> service.combine(air,hotels))
 				.thenCompose(
-						p->CompletableFuture.supplyAsync(()->service.addCarHire(initializeCars(), p))).join());				
+						p->CompletableFuture.supplyAsync(()->service.addCarHire(initializeCars(), p),EXECUTOR_SERVICE)).join());				
 	}
-	
 	
 	/**
 	 * Method to fetch the best price quote amongst a list of Service Providers for airlines and hotels and get Car quotes based on the previous two quotes
@@ -75,40 +74,50 @@ public class TravelController {
 	@RequestMapping(value = "/v2/airhotelscar/")
 	public ResponseEntity<Object> getAirlineAndHotelandcarQuotes(){	
 		List<CompletableFuture<TripPlan>> lsTp = new ArrayList<>();
-		CompletableFuture<TripPlan> airLinePlan = CompletableFuture.supplyAsync(()->service.selectBestTripPlan(initializeAirlines(), "Dallas", "Miami"));
-		CompletableFuture<TripPlan> hotelPlan = CompletableFuture.supplyAsync(()->service.selectBestTripPlan(initializeHotels(), "Dallas", "Miami"));
-		CompletableFuture<TripPlan> carPlan = CompletableFuture.supplyAsync(()->service.selectBestTripPlan(initializeCars(), "Dallas", "Miami"));
+		CompletableFuture<TripPlan> airLinePlan = CompletableFuture.supplyAsync(()->service.selectBestTripPlan(initializeAirlines(), "Dallas", "Miami"),EXECUTOR_SERVICE);
+		CompletableFuture<TripPlan> hotelPlan = CompletableFuture.supplyAsync(()->service.selectBestTripPlan(initializeHotels(), "Dallas", "Miami"),EXECUTOR_SERVICE);
+		CompletableFuture<TripPlan> carPlan = CompletableFuture.supplyAsync(()->service.selectBestTripPlan(initializeCars(), "Dallas", "Miami"),EXECUTOR_SERVICE);
 		lsTp.add(hotelPlan);
 		lsTp.add(airLinePlan);
 		lsTp.add(carPlan);
 		return ResponseEntity.ok().body(
 				CompletableFuture.allOf(airLinePlan,hotelPlan,carPlan)
-				.thenApply(
+				.thenApplyAsync(
 						ignoredVoid -> lsTp.stream().map(plan -> plan.join()).collect(Collectors.toList()))
-				.thenApply(plans->service.combine(plans)).join());				
+				.thenApplyAsync(plans->service.combine(plans)).join());				
 	}
 	
 	
 	
-	private static List<ServiceProvider> initializeAirlines(){
+	private List<ServiceProvider> initializeAirlines(){
 		List<ServiceProvider> hotels = new ArrayList<>();
-		hotels.add(new AAmericanAirlines());
-		hotels.add(new ADelta());
-		hotels.add(new ASouthWest());
+		hotels.add(american);
+		hotels.add(delta);
+		hotels.add(sWest);
 		return hotels;
 	}
 	
-	private static List<ServiceProvider> initializeHotels(){
+	private List<ServiceProvider> initializeHotels(){
 		List<ServiceProvider> hotels = new ArrayList<>();
-		hotels.add(new HCheapHotels());
-		hotels.add(new HHotelsDotCom());
+		hotels.add(cHotel);
+		hotels.add(hotelC);
 		return hotels;
 	}
 	
-	private static List<ServiceProvider> initializeCars(){
+	private List<ServiceProvider> initializeCars(){
 		List<ServiceProvider> hotels = new ArrayList<>();
-		hotels.add(new CKayak());
-		hotels.add(new CCars());
+		hotels.add(kayak);
+		hotels.add(cars);
 		return hotels;
 	}
+	
+	@Autowired TravelService service;
+	@Autowired AAmericanAirlines american;
+	@Autowired ADelta delta;
+	@Autowired ASouthWest sWest;
+	@Autowired CCars cars;
+	@Autowired CKayak kayak;
+	@Autowired HCheapHotels cHotel;
+	@Autowired HHotelsDotCom hotelC;
+	private static final ExecutorService EXECUTOR_SERVICE = Executors.newCachedThreadPool();
 }

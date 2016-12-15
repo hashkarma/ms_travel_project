@@ -3,6 +3,8 @@ package com.mytravel.service.impl;
 import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Component;
@@ -17,11 +19,13 @@ import com.mytravel.vo.TripPlan;
  */
 @Component
 public class TravelServiceImpl implements TravelService {
+	
+	private static final ExecutorService EXECUTOR_SERVICE = Executors.newCachedThreadPool();
 
 	@Override
 	public TripPlan selectBestTripPlan(List<ServiceProvider> providers, String origin, String destination) {
 		List<CompletableFuture<TripPlan>> tripPlans = providers.stream()
-				.map(provider -> CompletableFuture.supplyAsync(() -> provider.createPlan(origin,destination))) // For each provider invoke createPlan
+				.map(provider -> CompletableFuture.supplyAsync(() -> provider.createPlan(origin,destination),EXECUTOR_SERVICE)) // For each provider invoke createPlan
 				.collect(Collectors.toList());
 		return tripPlans.stream()
 				.min(Comparator.comparing(plan -> plan.join().getPrice())) // Pass each plan to the method
@@ -32,7 +36,7 @@ public class TravelServiceImpl implements TravelService {
 	public TripPlan selectBestTripPlan(List<ServiceProvider> providers, String origin, String destination, String alliance) {
 		List<CompletableFuture<TripPlan>> tripPlans = providers.stream()
 				.filter(provider -> alliance==null||provider.getAlliance().equals(alliance))
-				.map(provider -> CompletableFuture.supplyAsync(() -> provider.createPlan(origin,destination))) // For each provider invoke createPlan
+				.map(provider -> CompletableFuture.supplyAsync(() -> provider.createPlan(origin,destination),EXECUTOR_SERVICE)) // For each provider invoke createPlan
 				.collect(Collectors.toList());
 
 		return tripPlans.stream()

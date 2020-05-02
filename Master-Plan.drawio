@@ -1,1 +1,106 @@
-<mxfile host="app.diagrams.net" modified="2020-05-02T18:00:13.356Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15" etag="b3j0ArInVJafCshdzxAT" version="12.9.11" type="github"><diagram id="yKpRXpLceIQQkGZ7jGWy" name="Page-1">5Zpbc+MmFIB/jR7d0dWXR1/iZptkNo2z3d1HjLBFjUCDUGL11xdkZFnCSd2ZOKjTF1scEILvHB3OQTjBPN3/ykGWPLAYEcd3470TLBzf94fhUP4pSXmQDIPJQbDlOD6IvEawwn8hLXS1tMAxylsNBWNE4KwthIxSBEVLBjhnr+1mG0baT83AFhmCFQTElH7HsUgO0nHkNvJbhLdJ/WTP1TUpqBtrQZ6AmL2eiIIbJ5hzxsThKt3PEVHwai6H+5Zv1B4HxhEVl9ywZ4vbb6sN3Bc/lvunIKaT27uB7uUFkEJPeIkpoBADdeuCpQBTPXxR1kw4K2iMVLeeE8xeEyzQKgNQ1b5KK5CyRKREV+sHIC7Q/s2Re0ce0pAQS5HgpWyibxiMa4a1Eenia6MRr26SnGhjrGVAG8H22HXDSV5oVP8Cm29gm35f2ecUtTGNbGMKDEx3YLMD1kGFftQvUEMDCYqlG9JFxkXCtowCctNIZw00V5aaNveMZRrVn0iIUvtUUAjWBilh8fKHuv+XqC7+1N1VhcW+VSp16TBWNcD38cv5sIJD9M68Q+3RAd8i8U676Lw6OSJA4Jf2OD5cOWMrytljcdDNKNLFnydVjWpUoTzV039DoyObGg0NvzQnrIirKQuBOM0df0jk8GdrLq+2omI0BKlyRYdfNUfpGrh6VJoRlEpScuSMqgpcDaFkhfxVdsBzAajqPkYoQ7yaUiajldy6J+yurNY9YWSo5uZFzcV3V4JxZB+Y2wbmuxcSC69FbGQaM+awwIrZjCOwUwZnmdpk2DdqE4Pa9I+nr9ZBBVHfQNWJ2AmpR1JlBW4/grmod2+kZ2ZVGpU712lq76Bd6vivB83Mqe5WQvqv1Dos46W0D+tMZvUM1hKQv7xb/X5vHVnXvoLQOjIz6FshWHAsSuu0ugbWA1pmHDaFUGIRmG6PoTBd59mRgM2Nj5HXBuiNrQMcGgB/Ay/2V0vpZ8M2q/BSY7tazO+ZIewq4700tG4g2wN4YwPeDOQYOtWeOERZD7LMwXjUu/fTTADmcop4g6FO420z8zqLgmc96qgfdsJsAQRYg9x+Xj4YuX17M30zDZhh6dNcBc06MC/qbP2E9r+qmCnAEwKw2g/s3UrgBZ11NLIetPlmVnAP0nUMerACeN6wd7jMjGD6Rfb0YD998kbdIM3+y2lmBF++PtsnZURk9kmZof+MMLiTonnSh+/pTfjVH2ZmOGZgIpjKq1kuONsdD2OEUhJjjmAVtAWLnBVKfkosQxzLUSIuy2sAd2tG0WMjm2UMU1FNKJo50UJ9ryuEetj8eKbE/SgvGHaiFO/cZuUZ8NHVvGBgBnUG+TwBmbqEnOX5GvB/ttK2SX8IumEnXjm3STI5x86/GrozAV6RS8PJc+fNwzMSgTha8ZwRpsySssq0N5iQjuiE6YZRob8X+2Fd1h2resVXZi9kSvBWvQopjuPqYzTQAihZVxb/IfqIOjnd0W5bpvyZC3pgxo/PCCZUEt2W/weNXOLWP1cjZkQ6Z2mK1BkC26vgwHMnPTtWFpgR6TMiCLJUdvdYrAnOk2pbbGmeT3hAMbafVQ48fxR9FlRZbI5PVnUnh1CDm78B</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-05-02T18:00:31.993Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15" etag="e7YsVznF23wLrF7JhRst" version="12.9.11" type="github">
+  <diagram id="yKpRXpLceIQQkGZ7jGWy" name="Page-1">
+    <mxGraphModel dx="2646" dy="639" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-1" value="Financial Domain" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-820" y="60" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-2" value="AWS" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-50" y="70" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-3" value="Kafka" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="425" y="70" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="xoDHUSfcxuXFxR3dn9HK-4" target="xoDHUSfcxuXFxR3dn9HK-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="xoDHUSfcxuXFxR3dn9HK-4" target="xoDHUSfcxuXFxR3dn9HK-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-4" value="Cloud patterns&lt;br&gt;&amp;amp; their implementation till you understand deeper aspects" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="820" y="70" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-5" value="Event Store" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="800" y="200" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-7" value="Circuit Breaker" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="960" y="200" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-9" value="AVRO" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="350" y="200" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-10" value="Plain Kafka" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="500" y="200" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-11" value="Kafka Connect" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="500" y="270" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-12" value="KStream" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="350" y="270" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-13" value="KTable/KSQL" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="500" y="340" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-14" value="Security" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="350" y="340" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-15" value="Accounting&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-710" y="180" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-16" value="Java" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1240" y="440" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-17" value="Spring&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-960" y="440" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-18" value="Basic concepts" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-870" y="180" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-19" value="Certification" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-150" y="170" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-20" value="Database" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-700" y="440" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-21" value="Big Data" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1520" y="460" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-22" value="Reactive&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1340" y="540" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-23" value="Lambdas" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1160" y="540" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-24" value="AI/ML" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1740" y="460" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-25" value="IOT" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1960" y="460" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-26" value="Block Chain" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="2180" y="460" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-29" value="" style="line;strokeWidth=4;direction=south;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="-1400" y="100" width="10" height="540" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-30" value="" style="shape=crossbar;whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="-1620" y="340" width="910" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-31" value="Business Domain" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="-1570" y="210" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-32" value="Technology Domain" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="-1580" y="460" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-33" value="Commerce" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1090" y="60" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xoDHUSfcxuXFxR3dn9HK-34" value="Telecom/Publishing/&lt;br&gt;Media" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1275" y="60" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
